@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Multi-tenant inference systems and efficient parallel processing for running AI models on edge servers and mobile devices.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Inference | iDLSys</title>
+  <link rel="icon" href="../../assets/mark.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+  <script defer src="../../site.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../../">iDLSys</a>
+      <div class="header-brands">
+        <a class="university-brand" href="https://www.sydney.edu.au/">
+          <img src="https://wptheme.sydney.edu.au/assets/img/UoS_logo.svg" alt="The University of Sydney" width="233" height="80" referrerpolicy="no-referrer">
+        </a>
+        <a class="school-brand" href="https://www.sydney.edu.au/engineering/schools/school-of-electrical-and-computer-engineering.html">
+          <strong>ECE</strong>
+          <span>School of Electrical and Computer Engineering</span>
+        </a>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span>Menu</span>
+      </button>
+    </div>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <div class="wrap nav-inner">
+        <a href="../../">Home</a>
+        <a href="../" aria-current="true">Research</a>
+        <a href="../../news/">News</a>
+        <a href="../../people/">People</a>
+        <a href="../../contact/">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <nav class="direction-nav" aria-label="Research directions">
+      <div class="wrap direction-nav-inner">
+        <a href="../data/">Data</a>
+        <a href="../training/">Training</a>
+        <a href="./" aria-current="page">Inference</a>
+      </div>
+    </nav>
+    <section class="page-banner" aria-labelledby="page-title">
+      <div class="wrap page-banner-inner">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../">Research</a><span aria-hidden="true">/</span><span aria-current="page">Inference</span>
+        </nav>
+        <h1 id="page-title">Inference</h1>
+        <p class="page-lead">Efficient AI serving on shared GPUs, edge servers and mobile devices.</p>
+        <p class="page-intro">We design inference systems for workloads that share limited compute and memory. Our research looks at how to schedule requests, batch operations and cache model weights so that several models or agents can run on the same hardware while keeping response times predictable.</p>
+      </div>
+    </section>
+
+    <section class="section" id="publications" aria-labelledby="publications-title">
+      <div class="wrap">
+        <h2 id="publications-title">Selected publications</h2>
+        <ul class="publication-list">
+          <li id="agentserve">
+            <article class="publication" aria-labelledby="agentserve-title">
+              <figure class="paper-figure">
+                <a href="../../assets/papers/agentserve.webp" target="_blank" rel="noopener" aria-label="Open the figure for AgentServe: Algorithm-System Co-Design for Efficient Agentic AI Serving on a Consumer-Grade GPU in a new tab">
+                  <img src="../../assets/papers/agentserve.webp" alt="AgentServe architecture showing application, orchestration and execution layers on a shared GPU." width="1175" height="576" loading="lazy" decoding="async">
+                </a>
+              </figure>
+              <div class="paper-details">
+                <h3 id="agentserve-title">AgentServe: Algorithm-System Co-Design for Efficient Agentic AI Serving on a Consumer-Grade GPU</h3>
+                <p class="paper-authors">Yuning Zhang, Yan Yan, Nan Yang, Dong Yuan</p>
+                <p class="paper-venue">IEEE Transactions on Computers · 2026</p>
+                <p class="paper-description">AgentServe runs concurrent language-model agents on a single consumer GPU. It schedules prompt processing separately from token generation and reserves GPU resources for latency-sensitive decoding. The design aims to keep token delivery responsive while several agents share the same hardware.</p>
+                <div class="paper-actions">
+                  <a class="paper-action" href="https://doi.org/10.1109/TC.2026.3745924">Paper</a>
+                  <a class="paper-action" href="https://arxiv.org/abs/2603.10342">Abstract</a>
+                  <details class="paper-citation">
+                    <summary class="paper-action">BibTeX</summary>
+                    <pre><code>@article{zhang2026agentserve,
+  title = {{AgentServe: Algorithm-System Co-Design for Efficient Agentic AI Serving on a Consumer-Grade GPU}},
+  author = {Yuning Zhang and Yan Yan and Nan Yang and Dong Yuan},
+  year = {2026},
+  journal = {IEEE Transactions on Computers},
+  doi = {10.1109/TC.2026.3745924}
+}</code></pre>
+                  </details>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li id="duoserve">
+            <article class="publication" aria-labelledby="duoserve-title">
+              <figure class="paper-figure">
+                <a href="../../assets/papers/duoserve.webp" target="_blank" rel="noopener" aria-label="Open the figure for DuoServe-MoE: Dual-Phase Expert Prefetch and Caching for LLM Inference QoS Assurance in a new tab">
+                  <img src="../../assets/papers/duoserve.webp" alt="DuoServe-MoE system overview showing separate prefill and decode scheduling paths." width="1000" height="669" loading="lazy" decoding="async">
+                </a>
+              </figure>
+              <div class="paper-details">
+                <h3 id="duoserve-title">DuoServe-MoE: Dual-Phase Expert Prefetch and Caching for LLM Inference QoS Assurance</h3>
+                <p class="paper-authors">Yuning Zhang, Grant Pinkert, Nan Yang, Yanli Li, Dong Yuan</p>
+                <p class="paper-venue">arXiv preprint, revised · 2026</p>
+                <p class="paper-description">DuoServe-MoE uses different expert-loading strategies for the two phases of language-model inference. During prompt processing it overlaps weight transfers with computation. During token generation it predicts which experts will be needed next so it can load them ahead of time within a limited GPU memory budget.</p>
+                <div class="paper-actions">
+                  <a class="paper-action" href="https://arxiv.org/pdf/2509.07379v2">Paper</a>
+                  <a class="paper-action" href="https://arxiv.org/abs/2509.07379v2">Abstract</a>
+                  <details class="paper-citation">
+                    <summary class="paper-action">BibTeX</summary>
+                    <pre><code>@misc{zhang2026duoserve,
+  title = {{DuoServe-MoE: Dual-Phase Expert Prefetch and Caching for LLM Inference QoS Assurance}},
+  author = {Yuning Zhang and Grant Pinkert and Nan Yang and Yanli Li and Dong Yuan},
+  year = {2026},
+  eprint = {2509.07379v2},
+  archivePrefix = {arXiv}
+}</code></pre>
+                  </details>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li id="itif">
+            <article class="publication" aria-labelledby="itif-title">
+              <figure class="paper-figure">
+                <a href="../../assets/research-inference.webp" target="_blank" rel="noopener" aria-label="Open the figure for ITIF: Integrated Transformers Inference Framework for Multiple Tenants on GPU in a new tab">
+                  <img src="../../assets/research-inference.webp" alt="ITIF workflow for model integration, request batching and GPU scheduling." width="561" height="330" loading="lazy" decoding="async">
+                </a>
+              </figure>
+              <div class="paper-details">
+                <h3 id="itif-title">ITIF: Integrated Transformers Inference Framework for Multiple Tenants on GPU</h3>
+                <p class="paper-authors">Yuning Zhang, Zao Zhang, Wei Bao, Dong Yuan</p>
+                <p class="paper-venue">International Conference on Parallel Processing (ICPP) · 2023</p>
+                <p class="paper-description">ITIF serves Transformer models from multiple tenants on a shared GPU. It integrates model weights and rewrites operations during preparation, then batches requests and schedules matrix operations at runtime to make more efficient use of the shared hardware.</p>
+                <div class="paper-actions">
+                  <a class="paper-action" href="https://doi.org/10.1145/3605573.3605585">Paper</a>
+                  <details class="paper-citation">
+                    <summary class="paper-action">BibTeX</summary>
+                    <pre><code>@inproceedings{zhang2023itif,
+  title = {{ITIF: Integrated Transformers Inference Framework for Multiple Tenants on GPU}},
+  author = {Yuning Zhang and Zao Zhang and Wei Bao and Dong Yuan},
+  year = {2023},
+  booktitle = {International Conference on Parallel Processing},
+  pages = {112--121},
+  doi = {10.1145/3605573.3605585}
+}</code></pre>
+                  </details>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>iDLSys <span class="footer-university">The University of Sydney</span></p>
+      <a class="text-link" href="#top">Back to top <span class="arrow arrow-up" aria-hidden="true"></span></a>
+    </div>
+  </footer>
+</body>
+</html>

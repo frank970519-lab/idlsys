@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Decentralised systems for training AI models on large volumes of distributed, unlabelled data.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Training | iDLSys</title>
+  <link rel="icon" href="../../assets/mark.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+  <script defer src="../../site.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../../">iDLSys</a>
+      <div class="header-brands">
+        <a class="university-brand" href="https://www.sydney.edu.au/">
+          <img src="https://wptheme.sydney.edu.au/assets/img/UoS_logo.svg" alt="The University of Sydney" width="233" height="80" referrerpolicy="no-referrer">
+        </a>
+        <a class="school-brand" href="https://www.sydney.edu.au/engineering/schools/school-of-electrical-and-computer-engineering.html">
+          <strong>ECE</strong>
+          <span>School of Electrical and Computer Engineering</span>
+        </a>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span>Menu</span>
+      </button>
+    </div>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <div class="wrap nav-inner">
+        <a href="../../">Home</a>
+        <a href="../" aria-current="true">Research</a>
+        <a href="../../news/">News</a>
+        <a href="../../people/">People</a>
+        <a href="../../contact/">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <nav class="direction-nav" aria-label="Research directions">
+      <div class="wrap direction-nav-inner">
+        <a href="../data/">Data</a>
+        <a href="./" aria-current="page">Training</a>
+        <a href="../inference/">Inference</a>
+      </div>
+    </nav>
+    <section class="page-banner" aria-labelledby="page-title">
+      <div class="wrap page-banner-inner">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../">Research</a><span aria-hidden="true">/</span><span aria-current="page">Training</span>
+        </nav>
+        <h1 id="page-title">Training</h1>
+        <p class="page-lead">Decentralised learning from distributed, unlabelled data.</p>
+        <p class="page-intro">Many devices and organisations collect data that is difficult to label or pool. We study how to train models collaboratively while data stays local, including how to route model updates between peers and how differences in local data affect the robustness of self-supervised learning.</p>
+      </div>
+    </section>
+
+    <section class="section" id="publications" aria-labelledby="publications-title">
+      <div class="wrap">
+        <h2 id="publications-title">Selected publications</h2>
+        <ul class="publication-list">
+          <li id="robustness">
+            <article class="publication" aria-labelledby="robustness-title">
+              <figure class="paper-figure">
+                <a href="../../assets/papers/robustness.webp" target="_blank" rel="noopener" aria-label="Open the figure for Understanding the Robustness of Distributed Self-Supervised Learning Frameworks Against Non-IID Data in a new tab">
+                  <img src="../../assets/papers/robustness.webp" alt="Illustration of how data classes are distributed unevenly among clients." width="855" height="285" loading="lazy" decoding="async">
+                </a>
+              </figure>
+              <div class="paper-details">
+                <h3 id="robustness-title">Understanding the Robustness of Distributed Self-Supervised Learning Frameworks Against Non-IID Data</h3>
+                <p class="paper-authors">Xuanyu Chen, Nan Yang, Shuai Wang, Dong Yuan</p>
+                <p class="paper-venue">International Conference on Learning Representations (ICLR) · 2026</p>
+                <p class="paper-description">The study compares masked image modelling and contrastive learning when different clients hold data from different distributions. It examines how network connectivity affects robustness and evaluates an objective that aligns local and global representations during training.</p>
+                <div class="paper-actions">
+                  <a class="paper-action" href="https://proceedings.iclr.cc/paper_files/paper/2026/file/6b111780a4a1c3beecb43b708ad7415e-Paper-Conference.pdf">Paper</a>
+                  <a class="paper-action" href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/6b111780a4a1c3beecb43b708ad7415e-Abstract-Conference.html">Abstract</a>
+                  <a class="paper-action" href="https://arxiv.org/abs/2607.02447">arXiv</a>
+                  <details class="paper-citation">
+                    <summary class="paper-action">BibTeX</summary>
+                    <pre><code>@inproceedings{chen2026robustness,
+  title = {{Understanding the Robustness of Distributed Self-Supervised Learning Frameworks Against Non-IID Data}},
+  author = {Xuanyu Chen and Nan Yang and Shuai Wang and Dong Yuan},
+  year = {2026},
+  booktitle = {International Conference on Learning Representations}
+}</code></pre>
+                  </details>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li id="denav">
+            <article class="publication" aria-labelledby="denav-title">
+              <figure class="paper-figure">
+                <a href="../../assets/papers/denav.webp" target="_blank" rel="noopener" aria-label="Open the figure for DeNAV: Decentralized Self-Supervised Learning with a Training Navigator in a new tab">
+                  <img src="../../assets/papers/denav.webp" alt="DeNAV peer-to-peer model routing, local training and aggregation." width="685" height="384" loading="lazy" decoding="async">
+                </a>
+              </figure>
+              <div class="paper-details">
+                <h3 id="denav-title">DeNAV: Decentralized Self-Supervised Learning with a Training Navigator</h3>
+                <p class="paper-authors">Xuanyu Chen, Nan Yang, Charles Z. Liu, Dong Yuan</p>
+                <p class="paper-venue">Machine Learning · 2026</p>
+                <p class="paper-description">DeNAV trains models across peers that keep their own unlabelled data. Its navigator selects the next client for each lightweight model, and its aggregation procedure accounts for how recently each model was updated. This lets several models train across the network without central coordination.</p>
+                <div class="paper-actions">
+                  <a class="paper-action" href="https://link.springer.com/article/10.1007/s10994-025-06965-0">Paper</a>
+                  <a class="paper-action" href="https://link.springer.com/article/10.1007/s10994-025-06965-0#Abs1">Abstract</a>
+                  <details class="paper-citation">
+                    <summary class="paper-action">BibTeX</summary>
+                    <pre><code>@article{chen2026denav,
+  title = {{DeNAV: Decentralized Self-Supervised Learning with a Training Navigator}},
+  author = {Xuanyu Chen and Nan Yang and Charles Z. Liu and Dong Yuan},
+  year = {2026},
+  journal = {Machine Learning},
+  volume = {115},
+  pages = {82},
+  doi = {10.1007/s10994-025-06965-0}
+}</code></pre>
+                  </details>
+                  <details class="paper-citation">
+                    <summary class="paper-action">Image credit</summary>
+                    <p class="paper-credit">
+                      Image from <a href="https://link.springer.com/article/10.1007/s10994-025-06965-0#Fig2">DeNAV, Figure 2</a>,
+                      by Xuanyu Chen, Nan Yang, Charles Z. Liu and Dong Yuan.
+                      <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>. Converted to WebP.
+                    </p>
+                  </details>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li id="fl-survey">
+            <article class="publication" aria-labelledby="fl-survey-title">
+              <figure class="paper-figure">
+                <a href="../../assets/papers/fl-survey.webp" target="_blank" rel="noopener" aria-label="Open the figure for Threats and Defenses in the Federated Learning Life Cycle: A Comprehensive Survey and Challenges in a new tab">
+                  <img src="../../assets/papers/fl-survey.webp" alt="Stages and participants in the federated learning life cycle." width="850" height="453" loading="lazy" decoding="async">
+                </a>
+              </figure>
+              <div class="paper-details">
+                <h3 id="fl-survey-title">Threats and Defenses in the Federated Learning Life Cycle: A Comprehensive Survey and Challenges</h3>
+                <p class="paper-authors">Yanli Li, Zhongliang Guo, Nan Yang, Huaming Chen, Dong Yuan, Weiping Ding</p>
+                <p class="paper-venue">IEEE Transactions on Neural Networks and Learning Systems · 2025</p>
+                <p class="paper-description">This survey traces privacy and reliability risks across the federated learning life cycle, from participant selection and local training to aggregation and deployment. It compares defensive approaches, discusses the trade-offs that affect their practical use, and identifies open questions for reliable federated learning services.</p>
+                <div class="paper-actions">
+                  <a class="paper-action" href="https://doi.org/10.1109/TNNLS.2025.3563537">Paper</a>
+                  <a class="paper-action" href="https://pubmed.ncbi.nlm.nih.gov/40372861/">Abstract</a>
+                  <details class="paper-citation">
+                    <summary class="paper-action">BibTeX</summary>
+                    <pre><code>@article{li2025federatedlifecycle,
+  title = {{Threats and Defenses in the Federated Learning Life Cycle: A Comprehensive Survey and Challenges}},
+  author = {Yanli Li and Zhongliang Guo and Nan Yang and Huaming Chen and Dong Yuan and Weiping Ding},
+  year = {2025},
+  journal = {IEEE Transactions on Neural Networks and Learning Systems},
+  volume = {36},
+  number = {9},
+  pages = {15643--15663},
+  doi = {10.1109/TNNLS.2025.3563537}
+}</code></pre>
+                  </details>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>iDLSys <span class="footer-university">The University of Sydney</span></p>
+      <a class="text-link" href="#top">Back to top <span class="arrow arrow-up" aria-hidden="true"></span></a>
+    </div>
+  </footer>
+</body>
+</html>

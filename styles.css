@@ -273,23 +273,10 @@ button { font: inherit; }
 
 .hero-figure img {
   position: absolute;
-  /* The 626 × 361 source has a dark frame around the 594 × 329 photo area. */
-  top: calc(-100% * 12 / 329);
-  left: calc(-100% * 12 / 594);
-  width: calc(100% * 626 / 594);
-  max-width: none;
-  height: calc(100% * 361 / 329);
-  object-fit: cover;
-  object-position: 44% 47%;
-  filter: saturate(.79) contrast(.92) brightness(1.045) blur(.4px);
-}
-
-.hero-figure::after {
-  content: "";
-  position: absolute;
   inset: 0;
-  background: linear-gradient(130deg, #fffaf111, transparent 65%);
-  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .section { padding-block: clamp(3.35rem, 5.7vw, 5.25rem); }

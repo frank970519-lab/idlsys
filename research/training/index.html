@@ -36,7 +36,7 @@
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <div class="wrap nav-inner">
         <a href="../../">Home</a>
-        <a href="../" aria-current="true">Research</a>
+        <a href="../../research/" aria-current="true">Research</a>
         <a href="../../news/">News</a>
         <a href="../../people/">People</a>
         <a href="../../contact/">Contact</a>
@@ -47,15 +47,15 @@
   <main id="main">
     <nav class="direction-nav" aria-label="Research directions">
       <div class="wrap direction-nav-inner">
-        <a href="../data/">Data</a>
-        <a href="./" aria-current="page">Training</a>
-        <a href="../inference/">Inference</a>
+        <a href="../../research/data/">Data</a>
+        <a href="../../research/training/" aria-current="page">Training</a>
+        <a href="../../research/inference/">Inference</a>
       </div>
     </nav>
     <section class="page-banner" aria-labelledby="page-title">
       <div class="wrap page-banner-inner">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../">Research</a><span aria-hidden="true">/</span><span aria-current="page">Training</span>
+          <a href="../../research/">Research</a><span aria-hidden="true">/</span><span aria-current="page">Training</span>
         </nav>
         <h1 id="page-title">Training</h1>
         <p class="page-lead">Decentralised learning from distributed, unlabelled data.</p>
@@ -67,35 +67,6 @@
       <div class="wrap">
         <h2 id="publications-title">Selected publications</h2>
         <ul class="publication-list">
-          <li id="robustness">
-            <article class="publication" aria-labelledby="robustness-title">
-              <figure class="paper-figure">
-                <a href="../../assets/papers/robustness.webp" target="_blank" rel="noopener" aria-label="Open the figure for Understanding the Robustness of Distributed Self-Supervised Learning Frameworks Against Non-IID Data in a new tab">
-                  <img src="../../assets/papers/robustness.webp" alt="Illustration of how data classes are distributed unevenly among clients." width="855" height="285" loading="lazy" decoding="async">
-                </a>
-              </figure>
-              <div class="paper-details">
-                <h3 id="robustness-title">Understanding the Robustness of Distributed Self-Supervised Learning Frameworks Against Non-IID Data</h3>
-                <p class="paper-authors">Xuanyu Chen, Nan Yang, Shuai Wang, Dong Yuan</p>
-                <p class="paper-venue">International Conference on Learning Representations (ICLR) · 2026</p>
-                <p class="paper-description">The study compares masked image modelling and contrastive learning when different clients hold data from different distributions. It examines how network connectivity affects robustness and evaluates an objective that aligns local and global representations during training.</p>
-                <div class="paper-actions">
-                  <a class="paper-action" href="https://proceedings.iclr.cc/paper_files/paper/2026/file/6b111780a4a1c3beecb43b708ad7415e-Paper-Conference.pdf">Paper</a>
-                  <a class="paper-action" href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/6b111780a4a1c3beecb43b708ad7415e-Abstract-Conference.html">Abstract</a>
-                  <a class="paper-action" href="https://arxiv.org/abs/2607.02447">arXiv</a>
-                  <details class="paper-citation">
-                    <summary class="paper-action">BibTeX</summary>
-                    <pre><code>@inproceedings{chen2026robustness,
-  title = {{Understanding the Robustness of Distributed Self-Supervised Learning Frameworks Against Non-IID Data}},
-  author = {Xuanyu Chen and Nan Yang and Shuai Wang and Dong Yuan},
-  year = {2026},
-  booktitle = {International Conference on Learning Representations}
-}</code></pre>
-                  </details>
-                </div>
-              </div>
-            </article>
-          </li>
           <li id="denav">
             <article class="publication" aria-labelledby="denav-title">
               <figure class="paper-figure">
@@ -130,6 +101,64 @@
                       by Xuanyu Chen, Nan Yang, Charles Z. Liu and Dong Yuan.
                       <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>. Converted to WebP.
                     </p>
+                  </details>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li id="fedil">
+            <article class="publication" aria-labelledby="fedil-title">
+              <figure class="paper-figure">
+                <a href="../../assets/papers/fedil.webp" target="_blank" rel="noopener" aria-label="Open the figure for FedIL: Federated Incremental Learning from Decentralized Unlabeled Data with Convergence Analysis in a new tab">
+                  <img src="../../assets/papers/fedil.webp" alt="FedIL client training architecture with weak and strong augmentations, the client and server model predictions, and the retained pseudo-label set." width="1657" height="1034" loading="lazy" decoding="async">
+                </a>
+              </figure>
+              <div class="paper-details">
+                <h3 id="fedil-title">FedIL: Federated Incremental Learning from Decentralized Unlabeled Data with Convergence Analysis</h3>
+                <p class="paper-authors">Nan Yang, Dong Yuan, Charles Z. Liu, Yongkun Deng, Wei Bao</p>
+                <p class="paper-venue">Preprint · 2023</p>
+                <p class="paper-description">FedIL studies semi-supervised federated training when labels are available only at the server. Clients use agreement between the server and local models to select pseudo-labels, then build a local set of examples whose predicted labels stay consistent over time.</p>
+                <div class="paper-actions">
+                  <a class="paper-action" href="https://arxiv.org/abs/2302.11823">Preprint</a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li id="hiermo">
+            <article class="publication" aria-labelledby="hiermo-title">
+              <figure class="paper-figure">
+                <a href="../../assets/papers/hiermo.webp" target="_blank" rel="noopener" aria-label="Open the figure for Hierarchical Federated Learning With Momentum Acceleration in Multi-Tier Networks in a new tab">
+                  <img src="../../assets/papers/hiermo.webp" alt="Two-tier federated training compared with three-tier training, where edge nodes aggregate updates from nearby workers before sending them to the cloud." width="1383" height="746" loading="lazy" decoding="async">
+                </a>
+              </figure>
+              <div class="paper-details">
+                <h3 id="hiermo-title">Hierarchical Federated Learning With Momentum Acceleration in Multi-Tier Networks</h3>
+                <p class="paper-authors">Zhengjie Yang, Sen Fu, Wei Bao, Dong Yuan, Albert Y. Zomaya</p>
+                <p class="paper-venue">IEEE Transactions on Parallel and Distributed Systems · 2023</p>
+                <p class="paper-description">HierMo adds momentum at the worker, edge and cloud tiers of a federated system. The study also examines how often to aggregate models at each tier when training time is limited.</p>
+                <div class="paper-actions">
+                  <a class="paper-action" href="https://doi.org/10.1109/TPDS.2023.3294688">Paper</a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li id="doml">
+            <article class="publication" aria-labelledby="doml-title">
+              <figure class="paper-figure">
+                <a href="../../assets/papers/doml.webp" target="_blank" rel="noopener" aria-label="Open the figure for Distributed Online Multi-Label Learning with Privacy Protection in Internet of Things in a new tab">
+                  <img src="../../assets/papers/doml.webp" alt="An IoT network with locally held data, and the graph representation of the connections between its devices." width="1552" height="968" loading="lazy" decoding="async">
+                </a>
+              </figure>
+              <div class="paper-details">
+                <h3 id="doml-title">Distributed Online Multi-Label Learning with Privacy Protection in Internet of Things</h3>
+                <p class="paper-authors">Fan Huang, Nan Yang, Huaming Chen, Wei Bao, Dong Yuan</p>
+                <p class="paper-venue">Applied Sciences · 2023</p>
+                <p class="paper-description">This method trains multi-label classifiers across connected IoT devices as new observations arrive. Each device updates its model using local data and information from neighbours, keeping its raw observations on the device.</p>
+                <div class="paper-actions">
+                  <a class="paper-action" href="https://doi.org/10.3390/app13042713">Paper</a>
+                  <details class="paper-citation">
+                    <summary class="paper-action">Image credit</summary>
+                    <p class="paper-credit"><a href="https://www.mdpi.com/2076-3417/13/4/2713#applsci-13-02713-f001">Original figure</a> by Fan Huang, Nan Yang, Huaming Chen, Wei Bao, Dong Yuan. <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>. Converted to WebP.</p>
                   </details>
                 </div>
               </div>

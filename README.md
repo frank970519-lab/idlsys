@@ -23,7 +23,7 @@ Links and assets use relative paths, so the site also works under a renamed fork
 
 ## Edit the site
 
-- Update news in `news/index.html` and the latest three entries in `index.html`.
+- Update news in `news/index.html` and the latest two entries in `index.html`.
 - Edit publication entries under `research/data/`, `research/training/` and `research/inference/`.
 - Update the lab profile in `people/index.html` and visit information in `contact/index.html`.
 - Shared styles are in `styles.css`. The rotating keyword sphere is in `keyword-cloud.js`.

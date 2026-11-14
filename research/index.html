@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore how iDLSys builds and optimises computing systems for AI data, training and inference.">
+  <meta name="description" content="Explore iDLSys research on measurement-calibrated digital twins, decentralised learning and AI serving on shared GPUs.">
   <meta name="theme-color" content="#ffffff">
   <title>Research | iDLSys</title>
   <link rel="icon" href="../assets/mark.png" type="image/png">
@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
   <script defer src="../site.js"></script>
+  <script defer src="../research/carousel.js"></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -36,7 +37,7 @@
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <div class="wrap nav-inner">
         <a href="../">Home</a>
-        <a href="./" aria-current="page">Research</a>
+        <a href="../research/" aria-current="page">Research</a>
         <a href="../news/">News</a>
         <a href="../people/">People</a>
         <a href="../contact/">Contact</a>
@@ -45,59 +46,214 @@
   </header>
 
   <main id="main">
-    <nav class="direction-nav" aria-label="Research directions">
-      <div class="wrap direction-nav-inner">
-        <a href="data/">Data</a>
-        <a href="training/">Training</a>
-        <a href="inference/">Inference</a>
-      </div>
-    </nav>
     <section class="page-banner" aria-labelledby="page-title">
       <div class="wrap page-banner-inner">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../">Home</a><span aria-hidden="true">/</span><span aria-current="page">Research</span>
+        </nav>
         <h1 id="page-title">Research</h1>
-        <p class="page-lead">We build and optimise computing systems for AI applications, from generating training data to running models on edge and mobile devices.</p>
+        <p class="research-lead">We design AI systems for settings where measurements are costly, training data must stay local, or many workloads share a GPU.</p>
       </div>
     </section>
 
-    <div class="section research-overview">
-      <div class="wrap research-grid">
-        <article class="theme" id="data">
-          <a class="theme-link" href="data/" aria-labelledby="data-title" aria-describedby="data-summary">
-            <figure class="theme-image theme-image-data">
-              <img src="../assets/research-data.webp" alt="Simulated indoor environment with a coloured point cloud inset." width="509" height="288" loading="lazy" decoding="async">
-            </figure>
-            <div class="theme-content">
-              <h2 id="data-title">Data</h2>
-              <p id="data-summary">Digital twin platforms that generate high-quality AI training data for industry applications.</p>
-              <span class="text-link">Explore Data <span class="arrow" aria-hidden="true"></span></span>
-            </div>
-          </a>
-        </article>
-        <article class="theme" id="training">
-          <a class="theme-link" href="training/" aria-labelledby="training-title" aria-describedby="training-summary">
-            <figure class="theme-image">
-              <img src="../assets/research-training.webp" alt="Connected devices training models on separate local datasets in a decentralised network." width="509" height="339" loading="lazy" decoding="async">
-            </figure>
-            <div class="theme-content">
-              <h2 id="training-title">Training</h2>
-              <p id="training-summary">Decentralised systems for training AI models on large volumes of distributed, unlabelled data.</p>
-              <span class="text-link">Explore Training <span class="arrow" aria-hidden="true"></span></span>
-            </div>
-          </a>
-        </article>
-        <article class="theme" id="inference">
-          <a class="theme-link" href="inference/" aria-labelledby="inference-title" aria-describedby="inference-summary">
-            <figure class="theme-image">
-              <img src="../assets/research-inference.webp" alt="ITIF architecture showing how tenant models are integrated and inference requests are scheduled on a GPU." width="561" height="330" loading="lazy" decoding="async">
-            </figure>
-            <div class="theme-content">
-              <h2 id="inference-title">Inference</h2>
-              <p id="inference-summary">Multi-tenant inference systems and efficient parallel processing for running AI models on edge servers and mobile devices.</p>
-              <span class="text-link">Explore Inference <span class="arrow" aria-hidden="true"></span></span>
-            </div>
-          </a>
-        </article>
-      </div>
+    <div class="wrap research-topics">
+      <section class="research-topic" id="data" aria-labelledby="data-title">
+        <div class="research-topic-copy">
+          <p class="research-topic-name">Data</p>
+          <h2 id="data-title">How can simulations produce realistic sensor data?</h2>
+          <p>Collecting measurements across many indoor environments takes time. We calibrate digital twins with real measurements so researchers can vary conditions, generate synthetic data and repeat sensing experiments.</p>
+          <a class="text-link" href="../research/data/">Explore Data</a>
+        </div>
+        <div class="research-carousel">
+          <div class="research-carousel-slides">
+            <article class="research-highlight is-active" aria-labelledby="mmradartwin-title">
+              <figure class="research-highlight-figure">
+                <div class="research-highlight-image">
+                  <img src="../assets/papers/mmradartwin.webp" alt="mmRadarTwin workflow comparing recorded radar signals with signals simulated from an indoor scene." width="1200" height="519" decoding="async">
+                </div>
+              </figure>
+              <div class="research-highlight-copy">
+                <p class="research-highlight-venue">arXiv preprint · 2026</p>
+                <h3 id="mmradartwin-title">mmRadarTwin</h3>
+                <p>The platform compares real and simulated radar signals in a common representation and records the propagation paths behind simulated returns.</p>
+              </div>
+            </article>
+            <article class="research-highlight" aria-labelledby="posecompass-title">
+              <figure class="research-highlight-figure">
+                <div class="research-highlight-image">
+                  <img src="../assets/papers/posecompass-fig2.webp" alt="PoseCompass pipeline from candidate generation and value-based ranking to 3D Gaussian Splatting and pose-regressor fine-tuning." width="2160" height="1207" loading="lazy" decoding="async">
+                </div>
+              </figure>
+              <div class="research-highlight-copy">
+                <p class="research-highlight-venue">arXiv preprint · 2026</p>
+                <h3 id="posecompass-title">PoseCompass</h3>
+                <p>PoseCompass selects synthetic camera viewpoints based on localisation difficulty, coverage and rendering quality to help train visual localisation models.</p>
+              </div>
+            </article>
+            <article class="research-highlight" aria-labelledby="deepwisim-title">
+              <figure class="research-highlight-figure">
+                <div class="research-highlight-image">
+                  <img src="../assets/papers/deepwisim-fig1.jpg" alt="DeepWiSim architecture linking the Unreal Engine wireless simulator and a Python deep learning service over UDP." width="1023" height="446" loading="lazy" decoding="async">
+                </div>
+              </figure>
+              <div class="research-highlight-copy">
+                <p class="research-highlight-venue">ACM SIGCOMM Posters and Demos · 2022</p>
+                <h3 id="deepwisim-title">DeepWiSim</h3>
+                <p>DeepWiSim generates wireless measurements in a simulator and uses them to train and evaluate deep learning models.</p>
+              </div>
+            </article>
+            <article class="research-highlight" aria-labelledby="random-padding-title">
+              <figure class="research-highlight-figure">
+                <div class="research-highlight-image">
+                  <img src="../assets/papers/random-padding-fig2.webp" alt="Random padding patterns applied to successive convolution stages in the image classification network." width="1700" height="897" loading="lazy" decoding="async">
+                </div>
+              </figure>
+              <div class="research-highlight-copy">
+                <p class="research-highlight-venue">AusDM 2023</p>
+                <h3 id="random-padding-title">Random Padding Data Augmentation</h3>
+                <p>Random Padding varies where zeros are added around CNN feature maps to reduce reliance on absolute image positions.</p>
+              </div>
+            </article>
+          </div>
+          <div class="research-carousel-controls" role="group" aria-label="Data paper controls" hidden></div>
+        </div>
+      </section>
+
+      <section class="research-topic" id="training" aria-labelledby="training-title">
+        <div class="research-topic-copy">
+          <p class="research-topic-name">Training</p>
+          <h2 id="training-title">How can devices learn together while keeping data local?</h2>
+          <p>Devices often collect different kinds of data, and much of it is unlabelled. We study how peers can train a model while keeping raw data local and how training objectives and network connectivity affect robustness.</p>
+          <a class="text-link" href="../research/training/">Explore Training</a>
+        </div>
+        <div class="research-carousel">
+          <div class="research-carousel-slides">
+            <article class="research-highlight is-active" aria-labelledby="denav-title">
+              <figure class="research-highlight-figure">
+                <div class="research-highlight-image">
+                  <img src="../assets/papers/denav.webp" alt="DeNAV routes models between peers for local training and aggregation." width="685" height="384" loading="lazy" decoding="async">
+                </div>
+              </figure>
+              <div class="research-highlight-copy">
+                <p class="research-highlight-venue">Machine Learning · 2026</p>
+                <h3 id="denav-title">DeNAV</h3>
+                <p>A training navigator routes models between peers. DeNAV takes the age of each model update into account during aggregation.</p>
+              </div>
+            </article>
+            <article class="research-highlight" aria-labelledby="fedil-title">
+              <figure class="research-highlight-figure">
+                <div class="research-highlight-image">
+                  <img src="../assets/papers/fedil.webp" alt="FedIL client training architecture with weak and strong augmentations, the client and server model predictions, and the retained pseudo-label set." width="1657" height="1034" loading="lazy" decoding="async">
+                </div>
+              </figure>
+              <div class="research-highlight-copy">
+                <p class="research-highlight-venue">Preprint · 2023</p>
+                <h3 id="fedil-title">FedIL</h3>
+                <p>FedIL trains on unlabelled client data with a small labelled dataset at the server. It keeps pseudo-labels that remain stable across rounds.</p>
+              </div>
+            </article>
+            <article class="research-highlight" aria-labelledby="hiermo-title">
+              <figure class="research-highlight-figure">
+                <div class="research-highlight-image">
+                  <img src="../assets/papers/hiermo.webp" alt="Two-tier federated training compared with three-tier training, where edge nodes aggregate updates from nearby workers before sending them to the cloud." width="1383" height="746" loading="lazy" decoding="async">
+                </div>
+              </figure>
+              <div class="research-highlight-copy">
+                <p class="research-highlight-venue">IEEE Transactions on Parallel and Distributed Systems · 2023</p>
+                <h3 id="hiermo-title">HierMo</h3>
+                <p>HierMo uses momentum to speed up federated training across workers, edge nodes and a cloud server.</p>
+              </div>
+            </article>
+            <article class="research-highlight" aria-labelledby="doml-title">
+              <figure class="research-highlight-figure">
+                <div class="research-highlight-image">
+                  <img src="../assets/papers/doml.webp" alt="An IoT network with locally held data, and the graph representation of the connections between its devices." width="1552" height="968" loading="lazy" decoding="async">
+                </div>
+              </figure>
+              <div class="research-highlight-copy">
+                <p class="research-highlight-venue">Applied Sciences · 2023</p>
+                <h3 id="doml-title">Distributed Online Multi-Label Learning</h3>
+                <p>IoT devices update their classifiers from incoming local data and share model information with neighbours.</p>
+              </div>
+            </article>
+            <article class="research-highlight" aria-labelledby="fl-survey-title">
+              <figure class="research-highlight-figure">
+                <div class="research-highlight-image">
+                  <img src="../assets/papers/fl-survey.webp" alt="Stages and participants in the federated learning life cycle." width="850" height="453" loading="lazy" decoding="async">
+                </div>
+              </figure>
+              <div class="research-highlight-copy">
+                <p class="research-highlight-venue">IEEE Transactions on Neural Networks and Learning Systems · 2025</p>
+                <h3 id="fl-survey-title">Federated Learning Life Cycle Survey</h3>
+                <p>The survey examines privacy and reliability risks from participant selection through model deployment and compares defenses at each stage.</p>
+              </div>
+            </article>
+          </div>
+          <div class="research-carousel-controls" role="group" aria-label="Training paper controls" hidden></div>
+        </div>
+      </section>
+
+      <section class="research-topic" id="inference" aria-labelledby="inference-title">
+        <div class="research-topic-copy">
+          <p class="research-topic-name">Inference</p>
+          <h2 id="inference-title">How can multiple AI agents share a GPU?</h2>
+          <p>When models share limited compute and memory, incoming work can delay responses already in progress. We design scheduling, batching and caching techniques to make response times more predictable.</p>
+          <a class="text-link" href="../research/inference/">Explore Inference</a>
+        </div>
+        <div class="research-carousel">
+          <div class="research-carousel-slides">
+            <article class="research-highlight is-active" aria-labelledby="agentserve-title">
+              <figure class="research-highlight-figure">
+                <div class="research-highlight-image">
+                  <img src="../assets/papers/agentserve.webp" alt="AgentServe architecture showing how multiple language-model agents share a GPU." width="1175" height="576" loading="lazy" decoding="async">
+                </div>
+              </figure>
+              <div class="research-highlight-copy">
+                <p class="research-highlight-venue">IEEE Transactions on Computers · 2026</p>
+                <h3 id="agentserve-title">AgentServe</h3>
+                <p>AgentServe schedules prompt processing separately from token generation and reserves GPU resources to keep token delivery responsive.</p>
+              </div>
+            </article>
+            <article class="research-highlight" aria-labelledby="horizonserve-title">
+              <figure class="research-highlight-figure">
+                <div class="research-highlight-image">
+                  <img src="../assets/papers/horizonserve-fig5.png" alt="HorizonServe system overview showing the request profiler, joint scheduler and GPU runtime with feedback from downstream stages." width="2417" height="1253" loading="lazy" decoding="async">
+                </div>
+              </figure>
+              <div class="research-highlight-copy">
+                <p class="research-highlight-venue">arXiv preprint · 2026</p>
+                <h3 id="horizonserve-title">HorizonServe</h3>
+                <p>HorizonServe coordinates request scheduling and GPU allocation for multimodal models with different response-time targets.</p>
+              </div>
+            </article>
+            <article class="research-highlight" aria-labelledby="duoserve-title">
+              <figure class="research-highlight-figure">
+                <div class="research-highlight-image">
+                  <img src="../assets/papers/duoserve.webp" alt="DuoServe-MoE overview showing separate prefill and decode scheduling paths." width="1000" height="669" loading="lazy" decoding="async">
+                </div>
+              </figure>
+              <div class="research-highlight-copy">
+                <p class="research-highlight-venue">arXiv preprint · 2026</p>
+                <h3 id="duoserve-title">DuoServe-MoE</h3>
+                <p>DuoServe-MoE overlaps expert weight transfers with prompt processing and preloads likely experts during token generation.</p>
+              </div>
+            </article>
+            <article class="research-highlight" aria-labelledby="wa-specdec-title">
+              <figure class="research-highlight-figure">
+                <div class="research-highlight-image">
+                  <img src="../assets/papers/wa-specdec-fig2.webp" alt="WA-SpecDec architecture showing the world-aware bias module, target and draft model, and acceptance of action tokens." width="1800" height="976" loading="lazy" decoding="async">
+                </div>
+              </figure>
+              <div class="research-highlight-copy">
+                <p class="research-highlight-venue">arXiv preprint · 2026</p>
+                <h3 id="wa-specdec-title">WA-SpecDec</h3>
+                <p>WA-SpecDec shares visual context about the scene between the draft and verification stages to speed up action generation.</p>
+              </div>
+            </article>
+          </div>
+          <div class="research-carousel-controls" role="group" aria-label="Inference paper controls" hidden></div>
+        </div>
+      </section>
     </div>
   </main>
 

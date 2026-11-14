@@ -36,7 +36,7 @@
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <div class="wrap nav-inner">
         <a href="../../">Home</a>
-        <a href="../" aria-current="true">Research</a>
+        <a href="../../research/" aria-current="true">Research</a>
         <a href="../../news/">News</a>
         <a href="../../people/">People</a>
         <a href="../../contact/">Contact</a>
@@ -47,15 +47,15 @@
   <main id="main">
     <nav class="direction-nav" aria-label="Research directions">
       <div class="wrap direction-nav-inner">
-        <a href="../data/">Data</a>
-        <a href="../training/">Training</a>
-        <a href="./" aria-current="page">Inference</a>
+        <a href="../../research/data/">Data</a>
+        <a href="../../research/training/">Training</a>
+        <a href="../../research/inference/" aria-current="page">Inference</a>
       </div>
     </nav>
     <section class="page-banner" aria-labelledby="page-title">
       <div class="wrap page-banner-inner">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../">Research</a><span aria-hidden="true">/</span><span aria-current="page">Inference</span>
+          <a href="../../research/">Research</a><span aria-hidden="true">/</span><span aria-current="page">Inference</span>
         </nav>
         <h1 id="page-title">Inference</h1>
         <p class="page-lead">Efficient AI serving on shared GPUs, edge servers and mobile devices.</p>
@@ -125,30 +125,41 @@
               </div>
             </article>
           </li>
-          <li id="itif">
-            <article class="publication" aria-labelledby="itif-title">
+          <li id="horizonserve">
+            <article class="publication" aria-labelledby="horizonserve-title">
               <figure class="paper-figure">
-                <a href="../../assets/research-inference.webp" target="_blank" rel="noopener" aria-label="Open the figure for ITIF: Integrated Transformers Inference Framework for Multiple Tenants on GPU in a new tab">
-                  <img src="../../assets/research-inference.webp" alt="ITIF workflow for model integration, request batching and GPU scheduling." width="561" height="330" loading="lazy" decoding="async">
-                </a>
+                <img src="../../assets/papers/horizonserve-fig5.png" alt="HorizonServe system overview showing the request profiler, joint scheduler and GPU runtime with feedback from downstream stages." width="2417" height="1253" loading="lazy" decoding="async">
               </figure>
               <div class="paper-details">
-                <h3 id="itif-title">ITIF: Integrated Transformers Inference Framework for Multiple Tenants on GPU</h3>
-                <p class="paper-authors">Yuning Zhang, Zao Zhang, Wei Bao, Dong Yuan</p>
-                <p class="paper-venue">International Conference on Parallel Processing (ICPP) · 2023</p>
-                <p class="paper-description">ITIF serves Transformer models from multiple tenants on a shared GPU. It integrates model weights and rewrites operations during preparation, then batches requests and schedules matrix operations at runtime to make more efficient use of the shared hardware.</p>
+                <h3 id="horizonserve-title">HorizonServe: Coordinating Request Scheduling with GPU Sharing for Omni-Model Serving</h3>
+                <p class="paper-authors">Yuning Zhang, Dong Yuan</p>
+                <p class="paper-venue">arXiv preprint · 2026</p>
+                <p class="paper-description">Text, speech and image requests can share an initial model stage and then take different paths. HorizonServe coordinates admission to the shared stage and GPU allocation across stages so requests with different response-time targets can run on one GPU.</p>
                 <div class="paper-actions">
-                  <a class="paper-action" href="https://doi.org/10.1145/3605573.3605585">Paper</a>
+                  <a class="paper-action" href="https://arxiv.org/abs/2608.01785">Paper</a>
                   <details class="paper-citation">
-                    <summary class="paper-action">BibTeX</summary>
-                    <pre><code>@inproceedings{zhang2023itif,
-  title = {{ITIF: Integrated Transformers Inference Framework for Multiple Tenants on GPU}},
-  author = {Yuning Zhang and Zao Zhang and Wei Bao and Dong Yuan},
-  year = {2023},
-  booktitle = {International Conference on Parallel Processing},
-  pages = {112--121},
-  doi = {10.1145/3605573.3605585}
-}</code></pre>
+                    <summary class="paper-action">Image credit</summary>
+                    <p class="paper-credit">Fig. 5 · Zhang and Yuan, arXiv 2026 · <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license">CC BY-NC-ND 4.0</a></p>
+                  </details>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li id="wa-specdec">
+            <article class="publication" aria-labelledby="wa-specdec-title">
+              <figure class="paper-figure">
+                <img src="../../assets/papers/wa-specdec-fig2.webp" alt="WA-SpecDec architecture showing the world-aware bias module, target and draft model, and acceptance of action tokens." width="1800" height="976" loading="lazy" decoding="async">
+              </figure>
+              <div class="paper-details">
+                <h3 id="wa-specdec-title">WA-SpecDec: World-Aware Speculative Decoding for Vision-Language-Action Models</h3>
+                <p class="paper-authors">Zikang Wen, Yuning Zhang, Dong Yuan</p>
+                <p class="paper-venue">arXiv preprint · 2026</p>
+                <p class="paper-description">WA-SpecDec adds scene information to the visual embeddings before initial model processing. The draft and target models share the resulting visual context when proposing and verifying action tokens for robot control.</p>
+                <div class="paper-actions">
+                  <a class="paper-action" href="https://arxiv.org/abs/2608.08725">Paper</a>
+                  <details class="paper-citation">
+                    <summary class="paper-action">Image credit</summary>
+                    <p class="paper-credit">Fig. 2 · Wen et al., arXiv 2026 · <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a></p>
                   </details>
                 </div>
               </div>

@@ -1,5 +1,4 @@
 const keywordField = document.querySelector(".keyword-field");
-const keywordMotion = document.querySelector(".keyword-motion");
 const canvas = keywordField.querySelector(".keyword-sphere");
 const context = canvas.getContext("2d");
 
@@ -44,7 +43,6 @@ function initialiseKeywordSphere(paint) {
   let frame = null;
   let lastTime = null;
   let inView = false;
-  let paused = false;
 
   function orient(x, y, z) {
     const tippedY = y * cosTilt - z * sinTilt;
@@ -225,7 +223,7 @@ function initialiseKeywordSphere(paint) {
   }
 
   function syncMotion() {
-    const playing = motionPreference.matches && inView && !paused && !document.hidden;
+    const playing = motionPreference.matches && inView && !document.hidden;
     if (playing && frame === null) {
       frame = requestAnimationFrame(animate);
     } else if (!playing && frame !== null) {
@@ -238,7 +236,6 @@ function initialiseKeywordSphere(paint) {
   function updateMotionPreference() {
     keywordField.classList.toggle("is-sphere", motionPreference.matches);
     canvas.hidden = !motionPreference.matches;
-    keywordMotion.hidden = !motionPreference.matches;
     measureSphere();
     syncMotion();
   }
@@ -255,12 +252,6 @@ function initialiseKeywordSphere(paint) {
     inView = entry.isIntersecting;
     syncMotion();
   }).observe(keywordField);
-
-  keywordMotion.addEventListener("click", () => {
-    paused = !paused;
-    keywordMotion.textContent = paused ? "Resume motion" : "Pause motion";
-    syncMotion();
-  });
 
   motionPreference.addEventListener("change", updateMotionPreference);
   document.addEventListener("visibilitychange", syncMotion);

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Research updates, publications and preprints from iDLSys at the University of Sydney.">
+  <meta name="description" content="Journal publications and conference papers from iDLSys at the University of Sydney.">
   <meta name="theme-color" content="#ffffff">
   <title>News | iDLSys</title>
   <link rel="icon" href="../assets/mark.png" type="image/png">
@@ -39,7 +39,7 @@
       <div class="wrap nav-inner">
         <a href="../">Home</a>
         <a href="../research/">Research</a>
-        <a href="./" aria-current="page">News</a>
+        <a href="../news/" aria-current="page">News</a>
         <a href="../people/">People</a>
         <a href="../contact/">Contact</a>
       </div>
@@ -53,92 +53,162 @@
           <a href="../">Home</a><span aria-hidden="true">/</span><span aria-current="page">News</span>
         </nav>
         <h1 id="page-title">News</h1>
-        <p class="page-lead">Research updates, publications and preprints from iDLSys.</p>
+        <p class="page-lead">Journal publications and conference papers from iDLSys.</p>
       </div>
     </section>
 
     <div class="section">
       <div class="wrap news-layout">
-        <section class="news-feed" aria-labelledby="latest-updates">
-          <h2 id="latest-updates">Latest updates</h2>
+        <section class="news-feed" aria-label="Publication news">
           <ul class="news-list">
             <li>
-              <a class="news-item" href="../research/inference/#agentserve">
-                <time datetime="2026-10-22">22 October 2026</time>
+              <a class="news-item" href="https://doi.org/10.1109/TC.2026.3745924">
+                <span class="news-thumbnail">
+                  <img src="../assets/news/ieee-transactions-on-computers.webp" alt="Cover of IEEE Transactions on Computers" width="113" height="154" decoding="async">
+                </span>
                 <div>
-                  <h3>AgentServe published in IEEE Transactions on Computers</h3>
-                  <p>The paper introduces a system for serving multiple language-model agents on a single consumer GPU.</p>
+                  <span class="news-date"><time datetime="2026-10">October 2026</time></span>
+                  <h2>AgentServe published in IEEE Transactions on Computers</h2>
+                  <p>AgentServe gives prompt processing and token generation separate GPU resources. It helps multiple language-model agents share a consumer GPU while keeping token delivery responsive.</p>
                 </div>
-                <span class="arrow" aria-hidden="true"></span>
               </a>
             </li>
             <li>
-              <a class="news-item" href="../research/data/#mmradartwin">
-                <time datetime="2026-07-30">30 July 2026</time>
+              <a class="news-item" href="https://doi.org/10.1109/TETCI.2026.3670926">
+                <span class="news-thumbnail">
+                  <img src="../assets/news/ieee-tetci.webp" alt="Cover of IEEE Transactions on Emerging Topics in Computational Intelligence" width="370" height="492" loading="lazy" decoding="async">
+                </span>
                 <div>
-                  <h3>mmRadarTwin preprint released</h3>
-                  <p>The platform brings real radar measurements and indoor simulations into a common signal representation.</p>
+                  <span class="news-date"><time datetime="2026-10">October 2026</time></span>
+                  <h2>FedFAF published in IEEE Transactions on Emerging Topics in Computational Intelligence</h2>
+                  <p>FedFAF aligns features across healthcare institutions and uses Fisher information to reduce the impact of differential privacy noise during training.</p>
                 </div>
-                <span class="arrow" aria-hidden="true"></span>
               </a>
             </li>
             <li>
-              <a class="news-item" href="../research/training/#robustness">
-                <time datetime="2026-07-02">2 July 2026</time>
+              <a class="news-item" href="https://doi.org/10.1007/s10660-025-09999-7">
+                <span class="news-thumbnail">
+                  <img src="../assets/news/electronic-commerce-research.webp" alt="Cover of Springer’s Electronic Commerce Research journal" width="176" height="267" loading="lazy" decoding="async">
+                </span>
                 <div>
-                  <h3>ICLR study on distributed self-supervised learning now on arXiv</h3>
-                  <p>The study compares how training objectives and network connectivity affect learning when devices hold different kinds of data.</p>
+                  <span class="news-date"><time datetime="2026-06">June 2026</time></span>
+                  <h2>Blockchain risk monitoring study in Electronic Commerce Research</h2>
+                  <p>The paper develops a value-at-risk framework for monitoring systemic risk in cryptocurrency markets.</p>
                 </div>
-                <span class="arrow" aria-hidden="true"></span>
               </a>
             </li>
             <li>
               <a class="news-item" href="https://doi.org/10.1109/IPDPS65963.2026.00064">
-                <time datetime="2026-05-29">29 May 2026</time>
+                <span class="news-thumbnail">
+                  <img src="../assets/news/ipdps-2026.webp" alt="IPDPS 2026 conference logo" width="360" height="360" loading="lazy" decoding="async">
+                </span>
                 <div>
-                  <h3>MosaicUFL published in the IEEE IPDPS 2026 proceedings</h3>
-                  <p>The paper introduces a method for selecting devices for federated learning when their local data is unlabelled.</p>
+                  <span class="news-date"><time datetime="2026-05-25">25</time>–<time datetime="2026-05-29">29 May 2026</time></span>
+                  <h2>MosaicUFL at IEEE IPDPS 2026</h2>
+                  <p>MosaicUFL selects participating devices for federated training when their local data is unlabelled.</p>
                 </div>
-                <span class="arrow arrow-up-right" aria-hidden="true"></span>
               </a>
             </li>
             <li>
-              <a class="news-item" href="../research/data/#posecompass">
-                <time datetime="2026-05-12">12 May 2026</time>
+              <a class="news-item" href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/6b111780a4a1c3beecb43b708ad7415e-Abstract-Conference.html">
+                <span class="news-thumbnail">
+                  <img src="../assets/news/iclr.webp" alt="International Conference on Learning Representations logo" width="360" height="110" loading="lazy" decoding="async">
+                </span>
                 <div>
-                  <h3>PoseCompass preprint released</h3>
-                  <p>PoseCompass selects synthetic camera viewpoints that can help visual localisation models adapt to new scenes.</p>
+                  <span class="news-date"><time datetime="2026-04-23">23</time>–<time datetime="2026-04-27">27 April 2026</time></span>
+                  <h2>Distributed self-supervised learning study at ICLR 2026</h2>
+                  <p>The study compares masked image modelling and contrastive learning when clients hold different kinds of data. It examines how the choice of training objective and network connectivity affects robustness.</p>
                 </div>
-                <span class="arrow" aria-hidden="true"></span>
               </a>
             </li>
             <li>
-              <a class="news-item" href="../research/inference/#duoserve">
-                <time datetime="2026-04-09">9 April 2026</time>
+              <a class="news-item" href="https://doi.org/10.1016/j.jpdc.2025.105204">
+                <span class="news-thumbnail">
+                  <img src="../assets/news/journal-of-parallel-and-distributed-computing.webp" alt="Cover of the Journal of Parallel and Distributed Computing" width="238" height="300" loading="lazy" decoding="async">
+                </span>
                 <div>
-                  <h3>DuoServe-MoE preprint revised</h3>
-                  <p>The work uses separate expert-loading strategies for prompt processing and token generation on GPUs with limited memory.</p>
+                  <span class="news-date"><time datetime="2026-04">April 2026</time></span>
+                  <h2>Periodic job scheduling study published in the Journal of Parallel and Distributed Computing</h2>
+                  <p>The paper studies how to schedule recurring jobs across two machines when each job can run at one of several processing times. It identifies properties that reduce the search for an optimal schedule.</p>
                 </div>
-                <span class="arrow" aria-hidden="true"></span>
               </a>
             </li>
             <li>
-              <a class="news-item" href="../research/training/#denav">
-                <time datetime="2026-03-31">31 March 2026</time>
+              <a class="news-item" href="https://link.springer.com/article/10.1007/s10994-025-06965-0">
+                <span class="news-thumbnail">
+                  <img src="../assets/news/machine-learning.webp" alt="Cover of Springer’s Machine Learning journal" width="176" height="269" loading="lazy" decoding="async">
+                </span>
                 <div>
-                  <h3>DeNAV published in Machine Learning</h3>
-                  <p>The paper presents a peer-to-peer framework for training models on unlabelled data held across devices.</p>
+                  <span class="news-date"><time datetime="2026-03-31">31 March 2026</time></span>
+                  <h2>DeNAV published in Machine Learning</h2>
+                  <p>DeNAV routes models directly between devices for self-supervised training, keeping unlabelled data local and accounting for the age of each model update.</p>
                 </div>
-                <span class="arrow" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="news-item" href="https://doi.org/10.1109/TC.2025.3643296">
+                <span class="news-thumbnail">
+                  <img src="../assets/news/ieee-transactions-on-computers.webp" alt="Cover of IEEE Transactions on Computers" width="113" height="154" loading="lazy" decoding="async">
+                </span>
+                <div>
+                  <span class="news-date"><time datetime="2026-03">March 2026</time></span>
+                  <h2>FixGen featured in the March issue of IEEE Transactions on Computers</h2>
+                  <p>FixGen manages model memory and batches work so interactive and offline language-model requests can share one GPU.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="news-item" href="https://doi.org/10.1109/TCSS.2025.3603719">
+                <span class="news-thumbnail">
+                  <img src="../assets/news/ieee-tcss.webp" alt="Cover of IEEE Transactions on Computational Social Systems" width="370" height="504" loading="lazy" decoding="async">
+                </span>
+                <div>
+                  <span class="news-date"><time datetime="2026-02">February 2026</time></span>
+                  <h2>FedSCOPE featured in the February issue of IEEE Transactions on Computational Social Systems</h2>
+                  <p>FedSCOPE evaluates federated learning systems across five dimensions, covering learning performance, reliability, fairness, robustness and privacy.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="news-item" href="https://doi.org/10.1609/AAAI.V40I24.39122">
+                <span class="news-thumbnail">
+                  <img src="../assets/news/aaai-26.webp" alt="AAAI-26 conference logo" width="276" height="178" loading="lazy" decoding="async">
+                </span>
+                <div>
+                  <span class="news-date"><time datetime="2026-01-25">25 January 2026</time></span>
+                  <h2>Federated learning scaling laws at AAAI-26</h2>
+                  <p>The study examines how the number of participating clients and the data available to each client affect the choice of model size in federated learning.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="news-item" href="https://doi.org/10.1609/AAAI.V40I30.39781">
+                <span class="news-thumbnail">
+                  <img src="../assets/news/aaai-26.webp" alt="AAAI-26 conference logo" width="276" height="178" loading="lazy" decoding="async">
+                </span>
+                <div>
+                  <span class="news-date"><time datetime="2026-01-22">22 January 2026</time></span>
+                  <h2>Look-back horizons for federated forecasting at AAAI-26</h2>
+                  <p>This work proposes a way to choose how much past data to use when training a forecasting model across clients with different time series.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="news-item" href="https://doi.org/10.1109/TPDS.2025.3627574">
+                <span class="news-thumbnail">
+                  <img src="../assets/news/ieee-transactions-on-parallel-and-distributed-systems.webp" alt="Cover of IEEE Transactions on Parallel and Distributed Systems" width="113" height="154" loading="lazy" decoding="async">
+                </span>
+                <div>
+                  <span class="news-date"><time datetime="2026-01">January 2026</time></span>
+                  <h2>GPU scheduling study featured in the January issue of IEEE TPDS</h2>
+                  <p>The scheduler adjusts GPU capacity and request batch sizes together as workloads change, allowing multiple tenants to share one GPU.</p>
+                </div>
               </a>
             </li>
           </ul>
         </section>
         <section class="keyword-cloud" aria-labelledby="keyword-title">
-          <div class="keyword-heading">
-            <h2 id="keyword-title">Research keywords</h2>
-            <button class="keyword-motion" type="button" aria-controls="keyword-field" hidden>Pause motion</button>
-          </div>
+          <h2 id="keyword-title">Research keywords</h2>
           <div class="keyword-field" id="keyword-field">
             <canvas class="keyword-sphere" aria-hidden="true" hidden></canvas>
             <ul class="keyword-list">

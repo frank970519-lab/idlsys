@@ -36,7 +36,7 @@
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <div class="wrap nav-inner">
         <a href="../../">Home</a>
-        <a href="../" aria-current="true">Research</a>
+        <a href="../../research/" aria-current="true">Research</a>
         <a href="../../news/">News</a>
         <a href="../../people/">People</a>
         <a href="../../contact/">Contact</a>
@@ -47,15 +47,15 @@
   <main id="main">
     <nav class="direction-nav" aria-label="Research directions">
       <div class="wrap direction-nav-inner">
-        <a href="./" aria-current="page">Data</a>
-        <a href="../training/">Training</a>
-        <a href="../inference/">Inference</a>
+        <a href="../../research/data/" aria-current="page">Data</a>
+        <a href="../../research/training/">Training</a>
+        <a href="../../research/inference/">Inference</a>
       </div>
     </nav>
     <section class="page-banner" aria-labelledby="page-title">
       <div class="wrap page-banner-inner">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="../">Research</a><span aria-hidden="true">/</span><span aria-current="page">Data</span>
+          <a href="../../research/">Research</a><span aria-hidden="true">/</span><span aria-current="page">Data</span>
         </nav>
         <h1 id="page-title">Data</h1>
         <p class="page-lead">Digital twins and synthetic data for industry applications.</p>
@@ -99,8 +99,8 @@
           <li id="posecompass">
             <article class="publication" aria-labelledby="posecompass-title">
               <figure class="paper-figure">
-                <a href="../../assets/papers/posecompass.webp" target="_blank" rel="noopener" aria-label="Open the figure for PoseCompass: Intelligent Synthetic Pose Selection for Visual Localization in a new tab">
-                  <img src="../../assets/papers/posecompass.webp" alt="Comparison of randomly sampled and deliberately selected synthetic camera viewpoints." width="500" height="310" loading="lazy" decoding="async">
+                <a href="../../assets/papers/posecompass-fig2.webp" target="_blank" rel="noopener" aria-label="Open the figure for PoseCompass: Intelligent Synthetic Pose Selection for Visual Localization in a new tab">
+                  <img src="../../assets/papers/posecompass-fig2.webp" alt="PoseCompass pipeline from candidate generation and value-based ranking to 3D Gaussian Splatting and pose-regressor fine-tuning." width="2160" height="1207" loading="lazy" decoding="async">
                 </a>
               </figure>
               <div class="paper-details">
@@ -125,33 +125,34 @@
               </div>
             </article>
           </li>
-          <li id="wirelessdt">
-            <article class="publication" aria-labelledby="wirelessdt-title">
+          <li id="deepwisim">
+            <article class="publication" aria-labelledby="deepwisim-title">
               <figure class="paper-figure">
-                <a href="../../assets/research-data.webp" target="_blank" rel="noopener" aria-label="Open the figure for WirelessDT: A Digital Twin Platform for Real-Time Evaluation of Wireless Software Applications in a new tab">
-                  <img src="../../assets/research-data.webp" alt="Indoor digital twin scene and a point-cloud inset from the lab&#x27;s research slides." width="509" height="288" loading="lazy" decoding="async">
-                </a>
+                <img src="../../assets/papers/deepwisim-fig1.jpg" alt="DeepWiSim architecture linking the Unreal Engine wireless simulator and a Python deep learning service over UDP." width="1023" height="446" loading="lazy" decoding="async">
               </figure>
               <div class="paper-details">
-                <h3 id="wirelessdt-title">WirelessDT: A Digital Twin Platform for Real-Time Evaluation of Wireless Software Applications</h3>
-                <p class="paper-authors">Zhongzheng Lai, Dong Yuan, Huaming Chen, Yu Zhang, Wei Bao</p>
-                <p class="paper-venue">ICSE Companion · 2023</p>
-                <p class="paper-description">WirelessDT uses real-time ray tracing to emulate how radio signals propagate through a digital twin of an indoor environment. The demonstration evaluates two localisation methods in a mobile application and shows how simulated signal data can support repeatable wireless software evaluation.</p>
+                <h3 id="deepwisim-title">DeepWiSim: A Wireless Signal Simulator for Automatic Deep Learning</h3>
+                <p class="paper-authors">Zhongzheng Lai, Dong Yuan, Wei Bao, Yu Zhang, Bing Bing Zhou</p>
+                <p class="paper-venue">ACM SIGCOMM Posters and Demos · 2022</p>
+                <p class="paper-description">DeepWiSim uses ray tracing in Unreal Engine to produce wireless measurements from changing 3D scenes. A connected learning service consumes those measurements for model training and evaluation. The demonstration uses the workflow for trajectory forecasting.</p>
                 <div class="paper-actions">
-                  <a class="paper-action" href="https://doi.org/10.1109/ICSE-COMPANION58688.2023.00043">Paper</a>
-                  <a class="paper-action" href="https://github.com/codelzz/WirelessDT">Code</a>
-                  <a class="paper-action" href="https://conf.researchr.org/details/icse-2023/icse-2023-demonstrations/7/WirelessDT-A-Digital-Twin-Platform-for-Real-Time-Evaluation-of-Wireless-Software-App">Abstract</a>
-                  <details class="paper-citation">
-                    <summary class="paper-action">BibTeX</summary>
-                    <pre><code>@inproceedings{lai2023wirelessdt,
-  title = {{WirelessDT: A Digital Twin Platform for Real-Time Evaluation of Wireless Software Applications}},
-  author = {Zhongzheng Lai and Dong Yuan and Huaming Chen and Yu Zhang and Wei Bao},
-  year = {2023},
-  booktitle = {IEEE/ACM 45th International Conference on Software Engineering: Companion Proceedings},
-  pages = {146--150},
-  doi = {10.1109/ICSE-COMPANION58688.2023.00043}
-}</code></pre>
-                  </details>
+                  <a class="paper-action" href="https://doi.org/10.1145/3546037.3546049">Paper</a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li id="random-padding">
+            <article class="publication" aria-labelledby="random-padding-title">
+              <figure class="paper-figure">
+                <img src="../../assets/papers/random-padding-fig2.webp" alt="Random padding patterns applied to successive convolution stages in the image classification network." width="1700" height="897" loading="lazy" decoding="async">
+              </figure>
+              <div class="paper-details">
+                <h3 id="random-padding-title">Random Padding Data Augmentation</h3>
+                <p class="paper-authors">Nan Yang, Laicheng Zhong, Fan Huang, Wei Bao, Dong Yuan</p>
+                <p class="paper-venue">AusDM 2023</p>
+                <p class="paper-description">This method varies the location of zero padding across feature-map boundaries during training. It reduces the position cues created by fixed padding and can be used alongside image augmentations for classification.</p>
+                <div class="paper-actions">
+                  <a class="paper-action" href="https://doi.org/10.1007/978-981-99-8696-5_1">Paper</a>
                 </div>
               </div>
             </article>
